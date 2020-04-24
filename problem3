@@ -1,0 +1,3 @@
+1. It would be better to include larger-byte member variables next to  smaller-byte ones, since the padding that the cpu has to include will be smaller thus taking less space, so the user can create a struct that sits large-small-large-small variables in the ordering in hopes a better program design.
+
+2. Another thing user can do is design the struct so that member variables with the same byte count can be as close as to each other as possible, so designing the struct so that (for exmple) all ints appear first, then doubles.... This way the risk of running into sitautions where the data must move up to be written into addresses that are multiples of the size of that data-type

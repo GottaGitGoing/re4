@@ -1,0 +1,8 @@
+1. Total size 20. 
+paddings : a:0    b:2(to move memory to mult of 4)    c:0    d:3(to move memory to mult of 4 - dividing double into 2 four-bytes - )
+
+2. total size 16
+padding : a:0, b:0, c:0, d:1 ( to move memory to addres 8 which is mult of 4)
+
+
+Note: assumption is that double d is divided into two 4 byte sections that must be written back to back

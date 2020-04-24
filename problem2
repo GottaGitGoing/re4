@@ -1,0 +1,7 @@
+1. First Function
+a) I would expect NonConst to run faster, since the compiler does not need to check whether there will be a possiblity of change of i, so we are giving up the safety net in favor of speed
+b) I would expect Const to use less memory, since it does not have to make a copy of the original ( a big drawback of pass by value) 
+
+2. Second Fucntion
+a) The different thing about strings is that the length of them matters ( byte count) So given that string is smaller than the size of the pointer  memory it has to occupy , it will be faster to use the Const, but if the string is very big it would be faster to use the NonConst
+b) The nonConst would use less memory, if the string is very small (maybe one or two bytes) but if the string is very large, then making a copy of it is going to take O(N) so it would not be worth it to use the NonConst, and th better choice will become the Const
