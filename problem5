@@ -1,8 +1,8 @@
 Error 1: Invalid read size 4
-Program tried to read value from beyond the boundry of the 20byte allocation
+on line 21, for-loop of the program tried to read value from beyond the boundry of the 20byte allocation
 
 Error 2: COnditional jump or move ... uninit vals
-Program is doing a relOp(The conditional jump part)  based on an uninitialized value(the a)
+on line 32, Program is doing a relOp(The conditional jump part)  based on an uninitialized value(the a)
 
 Error 3: On line 54 of the runExample5() the user is trying to free a4 but there is no need to do so. 
 
@@ -11,8 +11,8 @@ Error 3: On line 54 of the runExample5() the user is trying to free a4 but there
 
 2 Leaks total:
 
-one 40byte(4byte int, 10 of them) leak at createAndFill, user did not dealocate the new int[size[ (a)
+one 40byte(4byte int, 10 of them) leak at createAndFill, user did not dealocate the a, after allocating it on line 6
 
 
 
-one 40byte (4byte int, 10 of em) leak at runExample5, the user did not deallocate a3
+one 40byte (4byte int, 10 of em) leak at runExample5, the user did not deallocate a3, after allocating it on line 46 of runExample5 function.
